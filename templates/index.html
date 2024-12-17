@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+		th,td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+	</style>
+   <title>Flowers</title>
+</head>
+<body>
+   <h1>Таблица цветов</h1>
+   <table>
+       <tr>
+           <th>ФИО</th>
+           <th>Цветы</th>
+           <th>Стоимость</th>
+           <th>Статус</th>
+       </tr>
+       {% for val in values %}
+           <tr>
+               <td>{{ val[0] }}</td>
+               <td>{{ val[1] }}</td>
+               <td>{{ val[2] }}</td>
+               <td>{{ val[3] }}</td>
+           </tr>
+       {% endfor %}
+   </table>
+</body>
+</html>
